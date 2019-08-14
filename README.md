@@ -1,5 +1,5 @@
 # ES Latest and Greatest
-This repository contains explanations and code examples related to ECMAScript 2015(and onwards) most useful features
+This repository contains explanations and code examples related to ECMAScript 2015(and onwards)'s most useful features
 
 ECMAScript is the standards body for the JavaScript language - it is responsible for handling the language's specification, which is currently in its 10th Edition - ECMAScript 2019.
 
