@@ -38,9 +38,11 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - Symbols
 - Modules
 - Sets
-- 
 ---
 
 ##### Shoulders I stand on;
+
+[ES6: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
+[ES6 For Everyone](https://es6.io/)
 
 
