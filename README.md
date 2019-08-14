@@ -38,7 +38,10 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - Symbols
 - Modules
 - Sets
+- Optional Chaining`*`
 ---
+
+`*` - Proposal
 
 ##### Shoulders I stand on;
 
