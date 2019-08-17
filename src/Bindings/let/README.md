@@ -1,6 +1,8 @@
 # let
 
-The `let` statement is used to declare local bindings in a program, and our mainly used when a binding will likely be initialized and/or reassigned at a later point in the programs lifecycle - `let` declarations aren't required to be initialized when declaring; a `let` binding can be created without a value.
+The `let` statement is used to declare local bindings in a program, and are mainly used when a binding will likely be initialized and/or reassigned at a later point in the programs lifecycle.
+
+`let` declarations aren't required to be initialized upon declaration; a `let` binding can be created without a value.
 
 ### Reassignment
 
