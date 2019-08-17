@@ -185,7 +185,7 @@ The log prints `10` ten times, which is a result of the variable leaking into th
 
 If the idea is to use the current iteration number to do a particular thing, once the timeout is complete, there are a couple of ways to 'fix' this;
 
-1. Stick with `var`, using an `IIFE`;
+**1. Stick with `var`, use an `IIFE`**
 
 ```
 for(var i = 0; i < 10; i++) {
@@ -202,9 +202,9 @@ for(var i = 0; i < 10; i++) {
 // iteration: 9
 ```
 
-The `IIFE` takes the tracker binding as a parameter, and immediately runs, thus capturing the current iteration number, allowing the timeout to print the expected value.
+The `IIFE` takes the tracker binding as a parameter, thus capturing the current iteration number for each iteration, allowing the timeout to print the expected value.
 
-2. Use `let` instead of `var`;
+**2. Use `let` instead of `var`**
 
 ```
 for(let i = 0; i < 10; i++) {

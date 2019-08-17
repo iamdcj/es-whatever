@@ -1,4 +1,5 @@
 # ECMAScript Latest and Greatest Features (ES6 onwards)
+
 This repository contains explanations and code examples related to ECMAScript 2015(and onwards)'s most useful features
 
 ECMAScript is the standards body for the JavaScript language - it is responsible for handling the language's specification, which is currently in its 10th Edition - ECMAScript 2019.
@@ -11,7 +12,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 
 - Bindings
   - [Const](src/Bindings/const)
-  - Let
+  - [Let](src/Bindings/let)
   - Temporal Dead Zone
 - Functions
   - Arrow Functions
@@ -39,6 +40,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - Modules
 - Sets
 - Optional Chaining`*`
+
 ---
 
 `*` - Proposal
@@ -47,5 +49,3 @@ Most of the features in this repository will be from the 6th Edition of the lang
 
 [ES6: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
 [ES6 For Everyone](https://es6.io/)
-
-
