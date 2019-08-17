@@ -11,7 +11,7 @@ console.log(bc);
 * === TDZ ===
 * ===========
 =========== */
-let bc = "Dinosaurs";
+let bc = "🦕 Dinosaurs 🦖";
 
 Cannot access 'bc' before initialization
 ```
@@ -27,7 +27,7 @@ console.log(bc);
 * === TDZ ===
 * ===========
 =========== */
-var bc = "Dinosaurs";
+var bc = "🦕 Dinosaurs 🦖";
 // undefined
 ```
 
