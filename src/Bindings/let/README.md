@@ -101,7 +101,7 @@ This provides a convenient way to create privacy in our programs by using `let` 
 
 #### Differences to `var`
 
-`let` statements will not be attached to the global object, `var`s will.
+When declared in the global lexical environment `let` statements will not be attached to the global object, whereas `var`s do become a member of the global object.
 
 ```
 let foo = "bar";
