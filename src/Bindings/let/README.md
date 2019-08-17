@@ -2,8 +2,6 @@
 
 The `let` statement is used to declare local bindings in a program, and are mainly used when a binding will likely be initialized and/or reassigned at a later point in the programs lifecycle.
 
-`let` declarations aren't required to be initialized upon declaration; a `let` binding can be created without a value.
-
 `let` declarations are affected by the `temporal dead zone`.
 
 ---
@@ -18,6 +16,17 @@ console.log(name); // David
 
 name = "David Jones";
 console.log(name); // David Jones
+```
+
+`let` declarations aren't required to be initialized upon declaration; a `let` binding can be created without a value.
+
+```
+let chosenPerson;
+let people = ["David", "Dave", "Davy"];
+
+chosenPerson = people.find(person => person.length > 4);
+
+console.log(chosenPerson) // David
 ```
 
 ## **Redeclaration**
@@ -58,7 +67,7 @@ Bindings cannot be redeclared, but `let`s can be shadowed in nested/sibling bloc
 
 `let` declarations can either be scoped globally, or local to its wrapping function or block.
 
-### **Global**
+### **Global Scope**
 
 `let`s can be declared in the global lexical environment;
 
@@ -72,7 +81,7 @@ However they do not become members of the `window` object;
 console.log(window.Dave); // undefined
 ```
 
-### **Function**
+### **Function Scope**
 
 Any `let` declared in a function body are scoped to that function's lexical environment, and its descendant lexical environments;
 
@@ -94,7 +103,7 @@ test()
 // bar
 ```
 
-### **Block**
+### **Block Scope**
 
 Any `let` declared in a block are scope to that particular block;
 
@@ -108,7 +117,7 @@ console.log(Dave) Uncaught ReferenceError: Dave is not defined
 
 This provides a convenient way to create privacy in our programs by using `let` bindings, opposed to running an `IIFE` to shield the program bindings from the global lexical environment.
 
-#### Differences to `var`
+### Differences to `var`
 
 When declared in the global lexical environment `let` statements will not be attached to the global object, whereas `var`s do become a member of the global object.
 
