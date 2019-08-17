@@ -4,6 +4,10 @@ The `let` statement is used to declare local bindings in a program, and are main
 
 `let` declarations aren't required to be initialized upon declaration; a `let` binding can be created without a value.
 
+`let` declarations are affected by the `temporal dead zone`.
+
+---
+
 ### Reassignment
 
 `let`s can be reassigned new values freely in a particular lexical environment;
@@ -18,20 +22,12 @@ console.log(name); // David Jones
 
 ### Redeclaration
 
-`let`s cannot be redeclared more than once in a particular lexical environment;
+`let`s cannot be declared more than once in a particular lexical environment;
 
 ```
 let name = "David";
 let name = "David Jones"; // Uncaught SyntaxError: Identifier 'name' has already been declared
 ```
-
-**`switch` statements**
-
-```
-
-```
-
-`let` declarations are affected by the `temporal dead zone`.
 
 ### Scope
 
