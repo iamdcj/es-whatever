@@ -6,7 +6,9 @@ The `let` statement is used to declare local bindings in a program, and are main
 
 ---
 
-## **Reassignment**
+## **Reassignment and Redeclaration**s
+
+### **Reassignment**
 
 `let`s can be reassigned new values freely in a particular lexical environment;
 
@@ -29,7 +31,7 @@ chosenPerson = people.find(person => person.length > 4);
 console.log(chosenPerson) // David
 ```
 
-## **Redeclaration**
+### **Redeclaration**
 
 `let`s cannot be declared more than once in a particular lexical environment;
 
