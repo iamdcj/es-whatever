@@ -147,6 +147,79 @@ foo();
 // Uncaught ReferenceError: baz is not defined
 ```
 
+This behaviour is useful when dealing with `for` loops;
+
+When using `var` the tracking variable is leaked into the parent lexical environment; `var`s are not scoped to the block.
+
+```
+for(var i = 0 i < 10; i++) {
+  // ...do sumfink
+}
+console.log(i); // 10
+```
+
+`let`s are block scoped, and the tracking variable does not leak into the parent lexical environment.
+
+```
+for(let k = 0; k < 10; k++) {
+  // ...do sumfink
+}
+console.log(k); // Uncaught ReferenceError: k is not defined
+```
+
+A benefit of using `let` in a `for` loop is that the tracking variable is reassigned with every iteration; the binding does not leak into the parent scope.
+
+Using `var` in a loop when performing an async action;
+
+```
+for(var i = 0; i < 10; i++) {
+  // mimic async
+  setTimeout(() => {
+    console.log("iteration: ", i);
+  } , 1000)
+}
+// iteration:  10 (x10)
+```
+
+The log prints `10` ten times, which is a result of the variable leaking into the parent scope; the tracker(`i`) is not re-initialized on each iteration, instead the loop is simply updating a static binding in the parent scope; the loop has finished iterating by the time the timeout performs the log, and the value of the tracker is always `10` as a result.
+
+If the idea is to use the current iteration number to do a particular thing, once the timeout is complete, there are a couple of ways to 'fix' this;
+
+1. Stick with `var`, using an `IIFE`;
+
+```
+for(var i = 0; i < 10; i++) {
+  (function(i) {
+    // mimic async
+    setTimeout(() => {
+      console.log("iteration: ", i);
+    } , 1000)
+  })(i)
+}
+
+// iteration: 0
+...
+// iteration: 9
+```
+
+The `IIFE` takes the tracker binding as a parameter, and immediately runs, thus capturing the current iteration number, allowing the timeout to print the expected value.
+
+2. Use `let` instead of `var`;
+
+```
+for(let i = 0; i < 10; i++) {
+  // mimic async
+  setTimeout(() => {
+    console.log("iteration: ", i);
+  } , 1000)
+}
+// iteration: 0
+...
+// iteration: 9
+```
+
+The tracker(`i`) is reassigned with each iteration, thus the value printed in after the timeout is always that of the current iteration.
+
 ---
 
 ##### References and Resources
