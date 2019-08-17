@@ -8,7 +8,7 @@ The `let` statement is used to declare local bindings in a program, and are main
 
 ---
 
-### Reassignment
+## **Reassignment**
 
 `let`s can be reassigned new values freely in a particular lexical environment;
 
@@ -20,7 +20,7 @@ name = "David Jones";
 console.log(name); // David Jones
 ```
 
-### Redeclaration
+## **Redeclaration**
 
 `let`s cannot be declared more than once in a particular lexical environment;
 
@@ -29,11 +29,37 @@ let name = "David";
 let name = "David Jones"; // Uncaught SyntaxError: Identifier 'name' has already been declared
 ```
 
-### Scope
+#### Shadowing
+
+Bindings cannot be redeclared, but `let`s can be shadowed in nested/sibling blocks, i.e. you can declare a binding with the same identifier in nested/sibling blocks;
+
+```
+{
+  let foo = "bar";
+  {
+    let foo = "baz";
+    console.log(foo) // baz
+
+    {
+      let foo = "bazola";
+      console.log(foo) // bazola
+    }
+  }
+
+  {
+    let foo = "quux";
+    console.log(foo) // quux
+  }
+  console.log(foo) // bar
+}
+```
+
+## **Scope**
 
 `let` declarations can either be scoped globally, or local to its wrapping function or block.
 
-**Global**
+### **Global**
+
 `let`s can be declared in the global lexical environment;
 
 ```
@@ -46,7 +72,8 @@ However they do not become members of the `window` object;
 console.log(window.Dave); // undefined
 ```
 
-**Function**
+### **Function**
+
 Any `let` declared in a function body are scoped to that function's lexical environment, and its descendant lexical environments;
 
 ```
@@ -67,29 +94,13 @@ test()
 // bar
 ```
 
-**Block**
+### **Block**
+
 Any `let` declared in a block are scope to that particular block;
 
 ```
 {
   let Dave = "David";
-}
-
-console.log(Dave) Uncaught ReferenceError: Dave is not defined
-```
-
-##### Shadowing
-
-Bindings can be shadowed in nested blocks;
-
-```
-{
-  let foo = "bar";
-  {
-    let foo = "baz";
-    console.log(foo) // baz
-  }
-  console.log(foo) // bar
 }
 
 console.log(Dave) Uncaught ReferenceError: Dave is not defined
@@ -118,7 +129,7 @@ function foo() {
     let baz = "bar";
     var bar = "foo";
   }
-  console.log(bar); // foo
+  console.log(bar);
   console.log(baz);
 
 }
