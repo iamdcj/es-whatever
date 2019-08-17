@@ -11,8 +11,8 @@ Most of the features in this repository will be from the 6th Edition of the lang
 ### Table of Contents
 
 - Bindings
-  - [Const](src/Bindings/const)
-  - [Let](src/Bindings/let)
+  - [Const](src/bindings/const)
+  - [Let](src/bindings/let)
   - Temporal Dead Zone
 - Functions
   - Arrow Functions

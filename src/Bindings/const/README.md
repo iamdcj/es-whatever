@@ -90,7 +90,7 @@ const name = "David Jones"; // Uncaught SyntaxError: Identifier 'name' has alrea
 
 ## **Mutations**
 
-Constants cannot be reassigned or redeclared, however if they are initialized with a composite value the contents of the compiste, e.g. an array or object, can be mutated.
+Constants cannot be reassigned or redeclared, however if they are initialized with a composite value, the contents of the compiste, e.g. an array or object, can be mutated.
 
 ### **Objects**
 
