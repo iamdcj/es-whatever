@@ -6,7 +6,7 @@ The `let` statement is used to declare local bindings in a program, and are main
 
 ---
 
-## **Reassignment and Redeclaration**s
+## **Reassignment and Redeclaration**
 
 ### **Reassignment**
 
