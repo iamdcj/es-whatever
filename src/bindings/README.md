@@ -2,8 +2,8 @@
 
 ES2015 introduces two new variable statements for use in JavaScript applications;
 
-- [`const`](src/const)
-- [`let`](src/const)
+- [`const`](./const)
+- [`let`](./let)
 
 These new statements provide the following to our JavaScript applications;
 
