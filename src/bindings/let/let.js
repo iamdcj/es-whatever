@@ -39,6 +39,26 @@
   }
 }
 
+//* Shadowing
+{
+  let foo = "bar"; {
+    let foo = "baz";
+    console.log(foo) // baz
+
+    {
+      let foo = "bazola";
+      console.log(foo) // bazola
+    }
+  }
+
+  {
+    let foo = "quux";
+    console.log(foo) // quux
+  }
+  console.log(foo) // bar
+}
+
+//* E
 
 // ==== SCOPE ==== //
 //* Example - Global Scope
@@ -70,4 +90,72 @@ console.log(window.Dave); //{}\ undefined
   test();
   //{} bar
   //{} bar
+}
+
+// === let vs. var
+
+
+//* Example - global object members
+// let
+let fooGlob = "bar";
+console.log(window.fooGlob); // undefined
+//! var
+var barGlob = "foo";
+console.log(window.barGlob); // foo
+
+//* scope leakage
+{
+
+  function foo() {
+    {
+      let baz = "bar";
+      var bar = "foo";
+    }
+    // var
+    console.log(bar);
+    // let
+    console.log(baz);
+  }
+  foo();
+  //{} foo
+  // !Uncaught ReferenceError: baz is not defined
+}
+
+//* Example - block scope with for loops
+{
+  //! var - leakage
+  for (var i = 0; i < 10; i++) {
+    // ...do sumfink
+  }
+  console.log(i); //{} 10
+
+  // let - no leakage
+  for (let k = 0; k < 10; k++) {
+    // ...do sumfink
+  }
+}
+console.log(k); //! Uncaught ReferenceError: k is not defined
+
+//* Example - block scope with for loops and async
+
+//! var - no binding for each iteration
+{
+  for (var i = 0; i < 10; i++) {
+    // mimic async
+    setTimeout(() => {
+      console.log("iteration: ", i);
+    }, 1000)
+  }
+  //{} iteration:  10 (x10)
+
+  // let - tracker is bound every iteration
+  for (let i = 0; i < 10; i++) {
+    // mimic async
+    setTimeout(() => {
+      console.log("iteration: ", i);
+    }, 1000)
+  }
+  //{} iteration: 0
+  // ...
+  //{} iteration: 9
 }
