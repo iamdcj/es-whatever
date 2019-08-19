@@ -7,7 +7,7 @@ ES2015 introduces two new variable statements for use in JavaScript applications
 
 These new statements provide the following to our JavaScript applications;
 
-### **Intention Clarity**
+### **Semantics**
 
 `const` and `let` possess intrinsic semantic value when authoring applications; they provide clarity on what is likely to happen/not happen with the variable declarations, and the values inside of them;
 
@@ -23,7 +23,7 @@ let bar
 
 `bar` does not yet hold a value, but will later in the application's lifecycle.
 
-### **Variable Behaviour**
+### **Behaviour**
 
 the semantics are backed-up by additional behaviour; `const` declarations cannot be reassigned, whereas `let` declarations signify the intent to reassign.
 
