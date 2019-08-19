@@ -1,4 +1,4 @@
-# Bindings
+# Variables
 
 ES2015 introduces two new variable statements for use in JavaScript applications;
 

@@ -10,10 +10,10 @@ Most of the features in this repository will be from the 6th Edition of the lang
 
 ### Table of Contents
 
-- Bindings
-  - [Const](src/bindings/const)
-  - [Let](src/bindings/let)
-  - Temporal Dead Zone
+- [Variables](src/variables)
+  - [Const](src/variables/const)
+  - [Let](src/variables/let)
+  - [Temporal Dead Zone](src/variables/temporal-dead-zone)
 - Functions
   - Arrow Functions
   - Default Arguments
