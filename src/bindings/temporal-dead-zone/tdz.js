@@ -1,3 +1,5 @@
+//* Example - TDZ w/ let
+//! hoisting with error
 {
   // Using let
   console.log(_bcLet);
@@ -11,6 +13,8 @@
   //! Cannot access '_bc' before initialization
 }
 
+//* Example - TDZ w/ const
+//! hoisting with error
 {
   // Using Const
   console.log(_bcConst);
@@ -24,6 +28,8 @@
   //! Cannot access '_bc' before initialization
 }
 
+//* Example - TDZ w/ var
+//* hoisting without error
 {
   // Using Var
   console.log(_bcVar);
