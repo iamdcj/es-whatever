@@ -4,6 +4,8 @@ The `const` statement is used to declare constant bindings in a program.
 
 Constant declarations must be initialized; you cannot simply declare a `const`, it must be assigned a value on creation.
 
+`const` declarations are affected by the [`temporal dead zone`](../temporal-dead-zone)
+
 ## **Scope**
 
 `const` declarations can either be scoped globally, or local to its wrapping function or block.
@@ -46,7 +48,7 @@ test()
 
 ### **Block Scope**
 
-Any `const` declared in a block are scope to that particular block;
+Any `const` declared in a block are scoped to that particular block, and any child scopes;
 
 ```
 {
@@ -56,7 +58,7 @@ Any `const` declared in a block are scope to that particular block;
 console.log(Dave) Uncaught ReferenceError: Dave is not defined
 ```
 
-Unlike `var` statements which do leak outside of blocks;
+Unlike `var` statements which do leak outside of blocks; they are bound to the wrapping function lexical environment, or if there is no wrapping function, the global lexical environment;
 
 ```
 {
@@ -64,9 +66,17 @@ Unlike `var` statements which do leak outside of blocks;
 }
 
 console.log(Dave) // David
+
+function test() {
+  {
+    var foo = "bar";
+  }
+  console.log(foo) // bar
+}
+console.log(foo) // Uncaught ReferenceError: foo is not defined
 ```
 
-This provides a convenient way to shield bindings from the global scope, opposed to using an `IIFE` to initialize the program.
+This provides a convenient way to shield bindings from the global scope, preventing global object pollution and potential binding collisions.
 
 ## **Reassignment and Redeclaration**
 
@@ -90,13 +100,17 @@ const name = "David Jones"; // Uncaught SyntaxError: Identifier 'name' has alrea
 
 ## **Mutations**
 
-Constants cannot be reassigned or redeclared, however if they are initialized with a composite value, the contents of the compiste, e.g. an array or object, can be mutated.
+Constants cannot be reassigned or redeclared, however if they are initialized with a composite value, the contents of the composite, e.g. an array or object, can be mutated.
 
 ### **Objects**
 
+The object can be modified in all the usual ways;
+
+Modify property values
+
 ```
 const testObj = {
-  name: "David";
+  name: "David"
 }
 
 console.log(testObj.name) // David
@@ -104,10 +118,28 @@ console.log(testObj.name) // David
 testObj.name = "David Jones";
 
 console.log(testObj.name) // David Jones
+```
+
+Add new members
+
+```
+testObj.age = 32;
+console.log(testObj.age) // 32
+
+```
+
+Remove members
+
+```
+
+delete testObj.age;
+console.log(testObj.age) // undefined
 
 ```
 
 ### **Arrays**
+
+Arrays can be modified in all the usual ways;
 
 ```
 const testArray = [1, 2, 3, 4]
@@ -118,8 +150,6 @@ testArray.push(5);
 
 console.log(testArray) // (5) [1, 2, 3, 4, 5]
 ```
-
-`const` declarations are affected by the `temporal dead zone`.
 
 ---
 

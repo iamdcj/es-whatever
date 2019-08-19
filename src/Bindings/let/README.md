@@ -2,7 +2,7 @@
 
 The `let` statement is used to declare local bindings in a program, and are mainly used when a binding will likely be initialized and/or reassigned at a later point in the programs lifecycle.
 
-`let` declarations are affected by the `temporal dead zone`.
+`let` declarations are affected by the [`temporal dead zone`](../temporal-dead-zone)
 
 ---
 
