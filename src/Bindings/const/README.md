@@ -35,7 +35,6 @@ function test() {
 
   function test2() {
     console.log(foo);
-
   }
 
   test2();
@@ -58,7 +57,7 @@ Any `const` declared in a block are scoped to that particular block, and any chi
 console.log(Dave) Uncaught ReferenceError: Dave is not defined
 ```
 
-Unlike `var` statements which do leak outside of blocks; they are bound to the wrapping function lexical environment, or if there is no wrapping function, the global lexical environment;
+Unlike `var` declarations, which do leak outside of blocks, `const` declarations are bound to the wrapping function lexical environment, or if there is no wrapping function, the global lexical environment;
 
 ```
 {
