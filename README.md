@@ -8,7 +8,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 
 ---
 
-### Table of Contents
+### Table of Contents 
 
 - [Variables](src/variables)
   - [Const](src/variables/const)
