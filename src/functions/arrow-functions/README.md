@@ -4,20 +4,39 @@ Arrows functions are a less verbose variant of regular functions in JavaScript.
 
 ## Syntax
 
+The syntactical difference makes for shorter function expressions;
+
+##### Arrow
+
+```
+const sum = (x, y) => {
+  return x + y;
+}
+```
+
+##### Regular
+
+```
+const sum = function(x, y) {
+  return x + y;
+}
+```
+
+The main syntactically difference is the loss of the `function` keyword.
+
 ### Implicit Returns
 
-### Destructuring
+The shorter syntax becomes more prevalent when implicit returns are used;
 
-### Return objects
+```
+const sum = (x, y) => x + y;
+```
 
-## Binding
+### Return objects implicitly
 
-They don't just differ syntatically from regular functions, but there are a number of differences in relation to bindings.
+They are support implicitly returning object literal as a value;
 
-### this
-
-### arguments
-
-### new
-
-### prototype
+const user = () => ({
+name: "David",
+age: 32
+})
