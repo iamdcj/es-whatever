@@ -1,6 +1,8 @@
 # Arrow Functions
 
-Arrows functions are a less verbose variant of regular functions in JavaScript.
+Arrows functions are a syntatical succint variant of regular functions in JavaScript.
+
+They do not behave exactly as per regular functions, but do provide a faster method of declaring resuable chunks of executional code.
 
 ## Syntax
 
@@ -42,3 +44,27 @@ const user = () => ({
 name: "David",
 age: 32
 })
+
+## Binding
+
+They don't just differ syntatically from regular functions, there are a number of differences in relation to bindings.
+
+### this
+
+They do not bind to a new context when executed, i.e. it doesn't have its own `this`.
+
+#### Methods
+
+Arrow functions are not good candidates for object methods.
+
+### arguments
+
+Arrow functions do not possess an `arguments` object.
+
+### new
+
+You cannot use arrow functions as constructors functions in your applications.
+
+### prototype
+
+Arrows do not possess a `prototype` object reference.
