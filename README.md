@@ -29,16 +29,16 @@ Most of the features in this repository will be from the 6th Edition of the lang
   - find
   - every
   - some
-- Generators
 - Spread and Rest
   - Spread
   - Rest
+- Generators
+- Sets
 - Promises
   - Promise
   - async...await
 - Symbols
 - Modules
-- Sets
 - Optional Chaining`*`
 
 ---
