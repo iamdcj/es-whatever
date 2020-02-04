@@ -24,7 +24,13 @@ const plusOne = ints.forEach(int => {
 console.log(plusOne) // undefined
 ```
 
-## Reasons for Using
+## Usage
+
+The `forEach` method is a generic method; it doesn't do a particular thing with the data in a collection, instead simply runs a function on each item. There are usually more appropriate helper methods available, e.g. if you want to return a subset of an array based on a condition, then [filter](../filter) is your friend.
+
+If there isn't a better method available to achieve whatever the goal is, then reach for `forEach`.
+
+## Examples
 
 It is a more succint way of writing a for loop;
 
@@ -43,9 +49,3 @@ Compared with the `forEach` method;
 `[arr].forEach(callBack)`
 
 The code becomes less error prone when it is simpler to write.
-
-## TL;DR
-
-The `forEach` method is a generic method; it doesn't do a particular thing with the data in a collection, instead simply runs a function on each item. There are usually more appropriate helper methods available, e.g. if you want to return a subset of an array based on a condition, then [filter](../filter) is your friend.
-
-**Rule of thumb:** if there isn't a better method available to achieve whatever the goal is, then reach for `forEach`.
