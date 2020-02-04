@@ -11,32 +11,15 @@ Most of the features in this repository will be from the 6th Edition of the lang
 ### Table of Contents 
 
 - [Variables](src/variables)
-  - [Const](src/variables/const)
-  - [Let](src/variables/let)
-  - [Temporal Dead Zone](src/variables/temporal-dead-zone)
 - Functions
-  - Arrow Functions
-  - Default Arguments
 - Template Literals
 - Classes
 - Destructuring
-  - Objects
-  - Arrays
-- Iterating
-  - for...of
-  - map
-  - filter
-  - find
-  - every
-  - some
+- Iterators
+- Collections
 - Spread and Rest
-  - Spread
-  - Rest
 - Generators
-- Sets
-- Promises
-  - Promise
-  - async...await
+- Promises and Fetch
 - Symbols
 - Modules
 - Optional Chaining`*`
