@@ -2,11 +2,13 @@
 
 The `forEach` method is an helper function which provides an easier/cleaner way of iterating over a collection of data.
 
-The method is performed on an array
+The method is performed on an `array` or a [`set`](../../collections/sets).
 
 `const ints = [1,2,3];`
 
-and for each item in the given array it runs a callback function;
+`const alphabet = new Set(['a', 'b' , 'c']);`
+
+and for each item in the given array/set it runs a callback function;
 
 ```
 ints.forEach(int => {
@@ -14,7 +16,13 @@ ints.forEach(int => {
 })
 ```
 
-Unlike other array helpers, e.g. [map](../map), `forEach` does not return a value; its return value will always be `undefined`;
+```
+alphabet.forEach(letter => {
+  console.log(letter)
+})
+```
+
+Unlike other `array` helpers, e.g. [map](../map), `forEach` does not return a value**; **its return value will always be `undefined`\*\*;
 
 ```
 const plusOne = ints.forEach(int => {
@@ -49,3 +57,9 @@ Compared with the `forEach` method;
 `[arr].forEach(callBack)`
 
 The code becomes less error prone when it is simpler to write.
+
+---
+
+References
+[Array - forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+[Set - forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
