@@ -2,7 +2,7 @@
 
 ES6 provides a number of really useful additions when it comes to working with arrays in modern applications, such as: [helper methods](#helpers), [chaining](#chaining), [comprehension](#comprehension).
 
-### Helpers
+### **Helpers**
 
 The most useful additions in ES6 are the collection of 'helper' methods available to the engineer when working with arrays in modern javascript applications;
 
@@ -16,9 +16,9 @@ The most useful additions in ES6 are the collection of 'helper' methods availabl
 - [every](./every)
 - [some](./some)
 
-⁺ **chainable**
+⁺ **chainable** - these will return a new array.
 
-### Chaining
+### **Chaining**
 
 Another useful feature in ES6 is the ability to chain certain methods, these include;
 
