@@ -13,7 +13,21 @@ numbers.map(n => n * 2);
 
 ## Usage
 
-The `map` helper should be used when you want to manipulate some/all items in array, and return another array with these modifications.
+The `map` helper should be used when you want to manipulate some/all items in array, and return a new array with these modifications present.
+
+```
+const users = [{ name: "David" }, { name: "Nole" }]
+
+const usersWithIDs = users.map((user, i) => ({
+  name: user.name,
+  id: `${user.name}-${i}`
+}))
+
+console.log(usersWithIDs);
+
+// {name: "David", id: "David-0"}
+// {name: "Nole", id: "Nole-1"}
+```
 
 Do not use map for the following:
 
@@ -27,3 +41,7 @@ There are more generic constructs for simply iterating over arrays, e.g. [forEac
 #### References
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+```
+
+```
