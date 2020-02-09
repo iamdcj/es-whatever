@@ -16,6 +16,13 @@ If no match can be found, `undefined` is returned;
 // undefined
 ```
 
+## Useage
+
+The `find` helper is used when you want to;
+
+- work with a particular element in an array
+- check for the presence of an item
+
 ### Objects
 
 ```

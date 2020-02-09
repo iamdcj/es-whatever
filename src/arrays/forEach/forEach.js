@@ -1,12 +1,25 @@
-// Simply Iterations
+// Simple Iterations
+
+// Logging values
 const ints = [1, 2, 3];
 
 ints.forEach(int => {
   console.log(int);
 });
 
-const plusOne = ints.forEach(int => {
-  return int + 1;
-});
+// Updating a tracker
+let sum = 0;
 
-console.log(plusOne); // undefined
+const addit = number => (sum += number);
+
+ints.forEach(number);
+console.log(sum); // 6
+
+// Delete all
+const selectedIDs = ["asdsa", "wqwwe", "bfdbd"];
+
+function deleteItems(item) {
+  // ...some aynsc deletion code
+}
+
+selectedIDs.forEach(deleteItems);

@@ -33,3 +33,15 @@ const users = [{ user: "David" }, { user: "Steffie" }, { user: "Nole" }];
 users.includes({ user: "Steffie" }); // false
 
 ```
+
+## Useage
+
+The `includes` helper can be used to create control flow when dealing with arrays; if an element is/isn't present then the application can progress/stop/return from a function.
+
+```
+const numbers = [1, 2, 3, 4];
+
+if(numbers.includes(3)) {
+  // ...do something
+}
+```
