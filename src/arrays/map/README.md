@@ -1,6 +1,8 @@
 # The `map` Method
 
-The `map` helper method iterate over a given array, returning a new array containing any changes resulting from the callback function working on the original arrays values.
+The `map` helper method iterates(maps) over a given array, returning a new array containing any changes resulting from the callback function working on the original arrays values.
+
+**Its purpose is to modify records in a collection of data**;
 
 ```
 const numbers = [1,2,3,4];
@@ -8,6 +10,8 @@ const numbers = [1,2,3,4];
 numbers.map(n => n * 2);
 
 // [2,4,6,8];
+
+**Map always returns a new array, leaving the original untouched.**
 
 ```
 
@@ -36,12 +40,41 @@ Do not use map for the following:
 
 There are more generic constructs for simply iterating over arrays, e.g. [forEach](../forEach).
 
+### Sparse Arrays and Empty Values
+
+The `map` helper deals with sparse arrays and empty values in a way which is worthing remembering.
+
+#### Sparse Arrays
+
+It respects sparse arrays, that is any falsy value in an array will persist within the new array;
+
+```
+const names = ["Steffie", , "Nole"];
+
+const fullNames = names.map(firstName => `${firstName} Jones`);
+
+console.log(fullNames);
+// ["Steffie Jones", empty, "Nole Jones"]
+```
+
+#### Empty Values
+
+If the callback function does not return a value, it will always return `undefined` for item it iterates over;
+
+```
+const initials = ["S", "D", "N"];
+const fullInitials = initials.map(initial => {
+  `${initial} J`;
+});
+
+console.log(fullInitials);
+///[ undefined, undefined, undefined ]
+```
+
+**_Always_ return a value from the callback function**
+
 ---
 
 #### References
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-
-```
-
-```
