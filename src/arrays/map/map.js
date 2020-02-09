@@ -1,4 +1,4 @@
-// === Double Numbers
+// ==== Double Numbers
 const numbers = [2, 4, 6];
 
 const doubled = numbers.map(n => n * 2);
@@ -6,7 +6,7 @@ const doubled = numbers.map(n => n * 2);
 console.log(doubled);
 // [4, 8, 12]
 
-// === Update objects
+// ==== Update objects
 
 const users = [{ name: "David" }, { name: "Nole" }];
 
@@ -36,3 +36,14 @@ const fullInitials = initials.map(initial => {
 
 console.log(fullInitials);
 ///[ undefined, undefined, undefined ]
+
+// ==== Pluck values
+const persons = [
+  { name: "Nole", surname: "Jones" },
+  { name: "Luis", surname: "Enrique" }
+];
+
+const surnames = persons.map(({ surname }) => surname);
+
+console.log(surnames);
+// ["Jones", "Enrique"]

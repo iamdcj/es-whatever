@@ -19,6 +19,12 @@ numbers.map(n => n * 2);
 
 The `map` helper should be used when you want to manipulate some/all items in array, and return a new array with these modifications present.
 
+It is often use to modify records in some fashion, or to pluck a particular property from a collection of data.
+
+#### Modify Records
+
+The following example build on-top of the original array, adding an `id` for each `user` in `users`;
+
 ```
 const users = [{ name: "David" }, { name: "Nole" }]
 
@@ -31,6 +37,22 @@ console.log(usersWithIDs);
 
 // {name: "David", id: "David-0"}
 // {name: "Nole", id: "Nole-1"}
+```
+
+#### Pluck Property
+
+The following example extracts the `surname` property from each `person` in `persons`; building an array of `surnames`;
+
+```
+const persons = [
+  { name: "Nole", surname: "Jones" },
+  { name: "Luis", surname: "Enrique" }
+];
+
+const surnames = persons.map(({ surname }) => surname);
+
+console.log(surnames);
+// ["Jones", "Enrique"]
 ```
 
 Do not use map for the following:
