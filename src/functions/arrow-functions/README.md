@@ -2,7 +2,7 @@
 
 Arrows functions are a syntatical succint variant of regular functions in JavaScript.
 
-They do not behave exactly as per regular functions, but do provide a faster method of declaring resuable chunks of executional code.
+They do not behave exactly as per a regular functions, but do provide a faster method of declaring resuable chunks of executional code.
 
 ## Syntax
 
@@ -49,9 +49,34 @@ age: 32
 
 They don't just differ syntatically from regular functions, there are a number of differences in relation to bindings.
 
-### this
+### `this`
 
-They do not bind to a new context when executed, i.e. it doesn't have its own `this`.
+They do not bind to a new context when executed, i.e. it doesn't have its own `this` - instead, it binds to its parent calling context, for example:
+
+```
+const user = {
+  name: "David",
+  logUser() {
+    console.log('NAME: ',this.name);
+
+    const doubleLog = () => { console.log(this.name) }
+
+    doubleLog()
+  }
+}
+
+// NAME:  David
+// David
+```
+
+If we use a regular function expression for `doubleLog` (`function doubleLog`), then we would get the following:
+
+```
+// NAME:  David
+// undefind
+```
+
+The calling context for `doubleLog` is bound to the global object(`Window`).
 
 #### Methods
 
