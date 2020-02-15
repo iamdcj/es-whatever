@@ -11,7 +11,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 ### Table of Contents 
 
 - [Variables](src/variables)
-- [Arrays](./arrays)
+- [Arrays](src/arrays)
 - Functions
 - Template Literals
 - Destructuring
