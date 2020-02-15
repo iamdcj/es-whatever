@@ -3,7 +3,7 @@
 Arrows functions are a syntatical succint variant of regular functions in JavaScript, with the following benefits;
 
 - ['Better' Context Binding](#this)
-- [Short Syntax](#syntax)
+- [Shorter Syntax](#syntax)
 - [Implicity Returns](#implicit-returns)
   - [Objects](return-objects-implicitly)
 
