@@ -83,6 +83,41 @@ If we use a regular function expression for `doubleLog` (`function doubleLog`), 
 
 The calling context for `doubleLog` is bound to the global object(`Window`).
 
+### Elements
+
+This isn't always a good thing, especially when adding callbacks to events on a `DOM` element.
+
+If you use a regular function for the event listener callback, the calling context gets bound to the element object iself
+
+##### HTML
+
+```
+<button>Clickity Click!</button>
+```
+
+##### JS
+
+```
+const _El = document.querySelector('button');
+
+_El.addEventListener('click', function() {
+  console.log(this);
+})
+
+// OnClick: <button>...
+
+```
+
+However this doesn't happen when using arrow functions for the callback; arrow functions are bound to their parent calling context, and will not be bound to the element object;
+
+```
+_El.addEventListener('click', () => {
+  console.log(this);
+})
+
+// OnClick: Window...
+```
+
 ### Cons of Arrow Functions
 
 The above plus points are all useful for day-to-day engineering, however that doesn't mean they should be used for `all` function expressions; arrow functions do come with a few downsides;
