@@ -19,7 +19,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - Spread and Rest
 - Classes
 - Generators
-- Promises and Fetch
+- Async
 - Symbols
 - Modules
 - Optional Chaining`*`

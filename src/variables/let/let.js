@@ -15,47 +15,49 @@
 
   chosenPerson = people.find(person => person.length > 4);
 
-  console.log(chosenPerson) // David
+  console.log(chosenPerson); // David
 }
 
 //* EXAMPLE 3 - Redeclaration
 {
   {
-    let foo = "bar"; {
+    let foo = "bar";
+    {
       let foo = "baz";
-      console.log(foo) // baz
+      console.log(foo); // baz
 
       {
         let foo = "bazola";
-        console.log(foo) // bazola
+        console.log(foo); // bazola
       }
     }
 
     {
       let foo = "quux";
-      console.log(foo) // quux
+      console.log(foo); // quux
     }
-    console.log(foo) // bar
+    console.log(foo); // bar
   }
 }
 
 //* Shadowing
 {
-  let foo = "bar"; {
+  let foo = "bar";
+  {
     let foo = "baz";
-    console.log(foo) // baz
+    console.log(foo); // baz
 
     {
       let foo = "bazola";
-      console.log(foo) // bazola
+      console.log(foo); // bazola
     }
   }
 
   {
     let foo = "quux";
-    console.log(foo) // quux
+    console.log(foo); // quux
   }
-  console.log(foo) // bar
+  console.log(foo); // bar
 }
 
 //* E
@@ -77,12 +79,11 @@ console.log(window.Dave); //{}\ undefined
 //* Example - Function Scope
 {
   function test() {
-    let foo = "bar"
+    let foo = "bar";
     console.log(foo);
 
     function test2() {
       console.log(foo);
-
     }
 
     test2();
@@ -94,7 +95,6 @@ console.log(window.Dave); //{}\ undefined
 
 // === let vs. var
 
-
 //* Example - global object members
 // let
 let fooGlob = "bar";
@@ -105,7 +105,6 @@ console.log(window.barGlob); // foo
 
 //* scope leakage
 {
-
   function foo() {
     {
       let baz = "bar";
@@ -131,7 +130,7 @@ console.log(window.barGlob); // foo
 
   // let - no leakage
   for (let k = 0; k < 10; k++) {
-    // ...do sumfink
+    console.log(k);
   }
 }
 console.log(k); //! Uncaught ReferenceError: k is not defined
@@ -144,7 +143,7 @@ console.log(k); //! Uncaught ReferenceError: k is not defined
     // mimic async
     setTimeout(() => {
       console.log("iteration: ", i);
-    }, 1000)
+    }, 1000);
   }
   //{} iteration:  10 (x10)
 
@@ -153,9 +152,9 @@ console.log(k); //! Uncaught ReferenceError: k is not defined
     // mimic async
     setTimeout(() => {
       console.log("iteration: ", i);
-    }, 1000)
+    }, 1000);
   }
   //{} iteration: 0
-  // ...
+  // ...1,2,3,4,5,6,7,8
   //{} iteration: 9
 }
