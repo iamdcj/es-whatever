@@ -127,3 +127,4 @@ The above plus points are all useful for day-to-day engineering, however that do
 - **`arguments`** - arrow functions do not possess an `arguments` object.
 - **`new`** - you cannot use arrow functions as constructors functions in your applications.
 - **`prototype`** - arrow functions do not possess a `prototype` object reference.
+- **binding** - the binding behaviour is likely more of a good thing, but not _all_ the time.
