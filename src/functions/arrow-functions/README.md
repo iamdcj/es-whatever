@@ -5,7 +5,7 @@ Arrows functions are a syntatical succint variant of regular functions in JavaSc
 - ['Better' Context Binding](#this)
 - [Shorter Syntax](#syntax)
 - [Implicit Returns](#implicit-returns)
-  - [Objects](return-objects-implicitly)
+  - [Objects](#return-objects-implicitly)
 
 They do not behave _exactly_ as per a regular functions, but do provide a faster method of declaring resuable chunks of executional code.
 
