@@ -12,7 +12,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 
 - [Variables](src/variables)
 - [Arrays](src/arrays)
-- Functions
+- [Functions](src/functions)
 - Template Literals
 - Destructuring
 - Collections
