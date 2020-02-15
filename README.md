@@ -11,24 +11,25 @@ Most of the features in this repository will be from the 6th Edition of the lang
 ### Table of Contents 
 
 - [Variables](src/variables)
+- [Arrays](./arrays)
 - Functions
 - Template Literals
-- Classes
 - Destructuring
-- Iterators
 - Collections
 - Spread and Rest
+- Classes
 - Generators
 - Promises and Fetch
 - Symbols
 - Modules
 - Optional Chaining`*`
-
----
+- Nullish Coalescing`*`
 
 `*` - Proposal
 
-##### Shoulders I stand on;
+---
+
+##### References and Resources
 
 [ES6: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
 [ES6 For Everyone](https://es6.io/)
