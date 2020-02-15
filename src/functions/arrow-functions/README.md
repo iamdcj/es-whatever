@@ -1,8 +1,13 @@
 # Arrow Functions
 
-Arrows functions are a syntatical succint variant of regular functions in JavaScript.
+Arrows functions are a syntatical succint variant of regular functions in JavaScript, with the following benefits;
 
-They do not behave exactly as per a regular functions, but do provide a faster method of declaring resuable chunks of executional code.
+- ['Better' Context Binding](#this)
+- [Short Syntax](#syntax)
+- [Implicity Returns](#implicit-returns)
+  - [Objects](return-objects-implicitly)
+
+They do not behave _exactly_ as per a regular functions, but do provide a faster method of declaring resuable chunks of executional code.
 
 ## Syntax
 
@@ -36,7 +41,7 @@ const sum = (x, y) => x + y;
 sum(1,1); // 2
 ```
 
-### Return objects implicitly
+### Return Objects Implicitly
 
 They are support implicitly returning object literal as a value;
 
@@ -49,7 +54,7 @@ age: 32
 
 They don't just differ syntatically from regular functions, there are a number of differences in relation to bindings.
 
-### `this`
+### this
 
 They do not bind to a new context when executed, i.e. it doesn't have its own `this` - instead, it binds to its parent calling context, for example:
 
@@ -78,18 +83,12 @@ If we use a regular function expression for `doubleLog` (`function doubleLog`), 
 
 The calling context for `doubleLog` is bound to the global object(`Window`).
 
-#### Methods
+### Cons of Arrow Functions
 
-Arrow functions are not good candidates for object methods.
+The above plus points are all useful for day-to-day engineering, however that doesn't mean they should be used for `all` function expressions; arrow functions do come with a few downsides;
 
-### arguments
-
-Arrow functions do not possess an `arguments` object.
-
-### new
-
-You cannot use arrow functions as constructors functions in your applications.
-
-### prototype
-
-Arrows do not possess a `prototype` object reference.
+- **Methods** - arrow functions are not good candidates for object methods.
+- **Anonymous** - arrow functions cannot be named, making them all technically anonymous, and potentially difficult to trace when debugging.
+- **`arguments`** - arrow functions do not possess an `arguments` object.
+- **`new`** - you cannot use arrow functions as constructors functions in your applications.
+- **`prototype`** - arrow functions do not possess a `prototype` object reference.
