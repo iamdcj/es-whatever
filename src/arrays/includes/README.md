@@ -2,6 +2,12 @@
 
 The `includes` method is an helper function which will return a `boolean` based on the presence/lack thereof of the value passed to the function.
 
+---
+
+## Primitives
+
+The includes method is useful when working with primitive values;
+
 ### Numbers
 
 If the array contains at least one member which a value matching that passed to the function, it will return `true`, else it will return `false`.
@@ -22,6 +28,10 @@ const strings = ["David", "Steffie", "Nole"];
 
 strings.includes("Bob"); // false
 ```
+
+## Composite
+
+The `include` method isn't particularly useful when working with arrays containing compositive values, and something like the [`find`](../find) method might be a better candidate.
 
 ### Objects
 
