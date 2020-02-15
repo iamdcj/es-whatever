@@ -122,7 +122,7 @@ _El.addEventListener('click', () => {
 
 The above plus points are all useful for day-to-day engineering, however that doesn't mean they should be used for `all` function expressions; arrow functions do come with a few downsides;
 
-- **Methods** - arrow functions are not good candidates for object methods.
+- **Methods** - arrow functions are not good candidates for object methods; the object is not bound to the method's context (`this`)
 - **Anonymous** - arrow functions cannot be named, making them all technically anonymous, and potentially difficult to trace when debugging.
 - **`arguments`** - arrow functions do not possess an `arguments` object.
 - **`new`** - you cannot use arrow functions as constructors functions in your applications.
