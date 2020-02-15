@@ -8,13 +8,14 @@ The most useful additions in ES6 are the collection of 'helper' methods availabl
 
 - [forEach](./forEach/)
 - [map](./map/)⁺
-- [filter](./filter/)⁺
-- [reduce](./reduce)⁺
+- filter⁺
+- reduce⁺
+- sort⁺
 - [find](./find)
-- [findIndex](./findIndex)
+- findIndex
 - [includes](./includes)
-- [every](./every)
-- [some](./some)
+- every
+- some
 
 ⁺ **chainable** - these will return a new array.
 
