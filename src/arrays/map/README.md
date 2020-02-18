@@ -1,8 +1,8 @@
 # The `map` Method
 
-The `map` helper method iterates(maps) over a given array, returning a new array containing any changes resulting from the callback function working on the original arrays values.
+The `map` helper method iterates(maps) over a given array, **returning a new array** containing any changes resulting from the callback function working on the original arrays values.
 
-**Its purpose is to modify records in a collection of data**;
+**Its purpose is to modify records in a collection of data**, without mutating the original source array.
 
 ```
 const numbers = [1,2,3,4];
