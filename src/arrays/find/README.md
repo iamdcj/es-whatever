@@ -1,6 +1,6 @@
 # The `find` Method
 
-The `find` method is an helper function which will return the first item from array,which matches based on the conditions inside the callback function.
+The `find` method is an helper function which will return the first item from array based on the conditions inside the callback function.
 
 ```
 [1,2,3].find(n => n === 2);
@@ -16,7 +16,7 @@ If no match can be found, `undefined` is returned;
 // undefined
 ```
 
-## Useage
+## Usage
 
 The `find` helper is used when you want to;
 
