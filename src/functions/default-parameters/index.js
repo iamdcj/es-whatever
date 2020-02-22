@@ -6,12 +6,12 @@ adder(5);
 // 6
 
 // --- Without Default Params
-const adderLeg = (x, y) => {
+const adderLegacy = (x, y) => {
   y = y ? y : 2;
 
   return x + y;
 };
 
-adderLeg(5);
+adderLegacy(5);
 
 // 7

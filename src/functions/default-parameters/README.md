@@ -22,3 +22,30 @@ adder(2)
 ```
 
 **This is because function parameters default to `undefined`**
+
+If we modify our function parameters by setting a default value
+
+```
+const adder = (x, y = 1) => x + y;
+
+```
+
+We can save face, and get a better return value
+
+```
+adder(2)
+
+// 3
+```
+
+### `undefined` parameter values
+
+If a parameter is passed to a function with the value of `undefined`, the stated default paramter will be used instead.
+
+```
+
+adder(5, undefined)
+
+// 6
+
+```
