@@ -38,6 +38,20 @@ adder(2)
 // 3
 ```
 
+#### Parameter order and omissions
+
+Using default parameters doesn't change how parameters behave in respect to order; if you want to use the default paramter you must ensure the parameter order(and amount) is consistent at the time of invocation.
+
+```
+const logger = (a = 1, b = 2, c = 3) => {
+  console.log(a, b, c)
+}
+
+logger(2, undefined, 5)
+
+// 2 2 5
+```
+
 ### `undefined` parameter values
 
 If a parameter is passed to a function with the value of `undefined`, the stated default paramter will be used instead;
@@ -84,4 +98,18 @@ typeof adder(5, '')
 
 // string
 
+```
+
+## Default Parameters for Default Parameters
+
+It is possible to use earlier default values as default values for later declared function parameters.
+
+In the following example we omit any parameters when calling the function, but the log statement still returns the default values from parameters `a` and `b`;
+
+```
+const sayHi = (a = "Hello", b= "World", c = `${a} ${b}` ) => {
+  console.log(c)
+}
+
+sayHi() // Hello World
 ```
