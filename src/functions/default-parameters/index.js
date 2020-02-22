@@ -29,3 +29,17 @@ logType(0);
 logType("");
 //
 // string
+
+// -- Default for Defaults
+const sayHi = (a = "Hello", b = "World", c = `${a} ${b}`) => {
+  console.log(c);
+};
+
+sayHi(); // Hello World
+
+// -- Omitting a parameter
+const logger = (a = 1, b = 2, c = 3) => {
+  console.log(a, b, c);
+};
+
+logger(2, undefined, 5); // 2 2 5
