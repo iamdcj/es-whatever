@@ -21,7 +21,8 @@ The code within a module is local to that module, and cannot be accessed by othe
 It is commonplace for modules to be referenced in other parts of an application, whether that be a part of a module, multiple parts of a module, or all parts of a module. **It is this export/import functionality that makes modules useful.**
 
 **`a-module,js`**
-If we add export statements to our module bindings, we can then use them elsewheere in the application.s
+
+If we add export statements to a module binding, we can then reference it elsewhere in the application;
 
 ```
 const userName = "David";
