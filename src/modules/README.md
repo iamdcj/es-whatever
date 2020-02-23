@@ -3,6 +3,7 @@
 A JavaScript module is a chunk of JS code living in its own file, containing various bindings, e.g. functions and regular variable declarations.
 
 **`a-module,js`**
+
 This is an example of a module file; it contains multiple bindings, however nothing is exported from this module.
 
 ```
@@ -13,7 +14,7 @@ const logUserHelper = () => {
 }
 ```
 
-The code within a module is local to that module, and cannot be accessed by other modules in the application - it is only when we export something from a module that the code becomes 'public'.
+The code within a module is local to that module, and cannot be accessed by other modules in the application - the code within can only be accessed publicly when we export that thing from a module.
 
 ## `export` and `import`
 
