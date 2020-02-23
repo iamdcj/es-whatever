@@ -44,7 +44,7 @@ There are two ways to of exporting a module; it can be a named export, or you ca
 
 #### Named
 
-A named export is defined using the `export` statement prior to a variable or function declaration;
+A named export is defined using the `export` statement prior to a variable or function declaration
 
 ```
 export const myFunction = () => { //some code... }
@@ -58,9 +58,28 @@ import { myFunction } from './somewhere';
 myFunction();
 ```
 
-Named exports are imported using the object destructuring syntax `{ sometthing, somethingElse}`.
+A module can have multiple named exports; these exports are imported using the object destructuring syntax `{ something, somethingElse}`.
 
 #### Default
+
+A default export is the usually the main thing to be exported from a module - the `default` function/binding. If you wrap some API in a module, and it contains numerous functions and variables, but you only want to expose the main interface, the default export comes into its own.
+
+```
+const doThis = () => { ... }
+const doThat = () => { ... }
+
+function doAllTheThings() {
+  doThis()
+  doThat()
+}
+
+export default doAllTheThings;
+
+```
+
+**A module can only have one `default` export.**
+
+Importing a `default` export isn't achieved using the destructuring syntax, as per named exports, but a single identifiers; `export default theMainTing`.
 
 #### Handling identifier conflicts
 
@@ -75,7 +94,7 @@ All of the above pertains to 'statically' imported module code, but modules can 
 
 ## **Modules Background**
 
-Modular javaScript isn't anything new in JS applications, however prior to ES2015 there wasn't native support for modules; developers had to code modules themselves, or use a third-party library to provide javaScript modules.
+Modular javaScript isn't anything new in JS applications, however prior to ES2015 there wasn't native support for modules; developers had to code a module pattern themselves, or use a third-party library to provide javaScript modules.
 
 ### Module Pattern
 
