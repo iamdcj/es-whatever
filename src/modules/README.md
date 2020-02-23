@@ -38,7 +38,7 @@ import { logUserHelper } from './a-module';
 logUserHelper(); // "David"
 ```
 
-### Named Exports vs. Default
+### Named vs. Default
 
 There are two ways to of exporting a module; it can be a named export, or you can export some as the `default`. **Any export, named or defult, must be a top-level item in the module file; you cannot export bindings that live lexically within a function.**
 
@@ -63,6 +63,10 @@ Named exports are imported using the object destructuring syntax `{ sometthing, 
 #### Default
 
 #### Handling identifier conflicts
+
+##### Static and Dynamic
+
+All of the above pertains to 'statically' imported module code, but modules can be imported dynamically using [dynamic imports](dynamic-module-loading).
 
 ## **Benefits**
 
