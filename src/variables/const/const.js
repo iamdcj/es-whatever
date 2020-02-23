@@ -37,11 +37,12 @@ test()
     const Dave = "David Jones"
     console.log(Dave) //{} David Jones
   }
+
   console.log(Dave) //{} David
 }
 
 // they do not leak outside blocks,
-console.log(Dave) //! Uncaught ReferenceError: Dave is not defined
+console.log(Dave) //! Uncaught ReferenceError: Dave is not defined (see Temporal Dead Zone)
 // a la var declarations
 {
   var Dave = "David C Jones";

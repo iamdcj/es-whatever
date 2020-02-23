@@ -25,8 +25,8 @@ let bar
 
 ### **Behaviour**
 
-the semantics are backed-up by additional behaviour; `const` declarations cannot be reassigned, whereas `let` declarations signify the intent to reassign.
+The semantics are backed-up by additional behaviour; `const` declarations cannot be reassigned, whereas `let` declarations signify the intent to reassign.
 
 ### **Scoping Rules**
 
-both `const` and `let` introduce block scoped bindings to JavaScript applications.
+Both `const` and `let` introduce block scoped bindings to JavaScript applications.
