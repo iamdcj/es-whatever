@@ -13,6 +13,7 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - [Variables](src/variables)
 - [Arrays](src/arrays)
 - [Functions](src/functions)
+- [Modules](src/modules)
 - Template Literals
 - Destructuring
 - Collections
@@ -21,7 +22,6 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - Generators
 - Async
 - Symbols
-- Modules
 - Optional Chaining`*`
 - Nullish Coalescing`*`
 
