@@ -30,3 +30,7 @@ The semantics are backed-up by additional behaviour; `const` declarations cannot
 ### **Scoping Rules**
 
 Both `const` and `let` introduce block scoped bindings to JavaScript applications.
+
+## Does `var` have a future?
+
+It depends on your stance, some use `var` for variables shared across many scopes, others simply don't bother with it at all. **I don't use it, I don't see a good reason to.**
