@@ -17,7 +17,7 @@ The code within a module is local to that module, and cannot be accessed by othe
 
 ## `export` and `import`
 
-It is commomplace for modules to be referenced in other parts of an application, whether that be a part of a module, multiple parts of a module, or all parts of a module. **It is this export/import functionality that makes modules really powerful.**
+It is commonplace for modules to be referenced in other parts of an application, whether that be a part of a module, multiple parts of a module, or all parts of a module. **It is this export/import functionality that makes modules useful.**
 
 **`a-module,js`**
 If we add export statements to our module bindings, we can then use them elsewheere in the application.s
@@ -40,9 +40,25 @@ logUserHelper(); // "David"
 
 ### Named Exports vs. Default
 
-There are two ways to of exporting a module; it can be a named export, or you can export some as the `default`.
+There are two ways to of exporting a module; it can be a named export, or you can export some as the `default`. **Any export, named or defult, must be a top-level item in the module file; you cannot export bindings that live lexically within a function.**
 
 #### Named
+
+A named export is defined using the `export` statement prior to a variable or function declaration;
+
+```
+export const myFunction = () => { //some code... }
+```
+
+By default the name of the export is taken from the binding identifier, in the above case `myFunction`. It is this identfier we use when importing from something from the module;
+
+```
+import { myFunction } from './somewhere';
+
+myFunction();
+```
+
+Named exports are imported using the object destructuring syntax `{ sometthing, somethingElse}`.
 
 #### Default
 
