@@ -1,8 +1,9 @@
 # Modules
 
-A JavaScript module is a chunk of JS code living in its own file, containing various bindings, e.g. functions and regular variable declarations, with some or all `export`ed for use across the various parts of the application via an `import` syntax.
+A JavaScript module is a chunk of JS code living in its own file, containing various bindings, e.g. functions and regular variable declarations.
 
-##### a-module.js
+**`a-module,js`**
+This is an example of a module file; it contains multiple bindings, however nothing is exported from this module.
 
 ```
 const userName = "David";
@@ -10,17 +11,47 @@ const userName = "David";
 const logUserHelper = () => {
   console.log(userName);
 }
+```
 
-export { logUserHelper };
+The code within a module is local to that module, and cannot be accessed by other modules in the application - it is only when we export something from a module that the code becomes 'public'.
+
+## `export` and `import`
+
+It is commomplace for modules to be referenced in other parts of an application, whether that be a part of a module, multiple parts of a module, or all parts of a module. **It is this export/import functionality that makes modules really powerful.**
+
+**`a-module,js`**
+If we add export statements to our module bindings, we can then use them elsewheere in the application.s
 
 ```
+const userName = "David";
+
+export const logUserHelper = () => {
+  console.log(userName);
+}
+```
+
+**`another-module.js`**
+
+```
+import { logUserHelper } from './a-module';
+
+logUserHelper(); // "David"
+```
+
+### Named Exports vs. Default
+
+There are two ways to of exporting a module; it can be a named export, or you can export some as the `default`.
+
+#### Named
+
+#### Default
+
+#### Handling identifier conflicts
 
 ## **Benefits**
 
 - Modules allow for a cleaner, better-structured codebase.
 - Each module is automatically set to 'strict' mode.
-
-## Named Exports vs. Default
 
 ## **Modules Background**
 
