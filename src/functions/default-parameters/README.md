@@ -1,6 +1,6 @@
 # Default Function Parameters
 
-Default Function arguments provide the ability to ensure named function arguments are initialized with a value when the function is invoked.
+Default Function Parameters provide the ability to ensure named function arguments are initialized with a value when the function is invoked.
 
 This feature is useful when a function is called without all the parameters being passed, or when a parameter is passed as `undefined`.
 
@@ -107,7 +107,7 @@ It is possible to use earlier default values as default values for later declare
 In the following example we omit any parameters when calling the function, but the log statement still returns the default values from parameters `a` and `b`;
 
 ```
-const sayHi = (a = "Hello", b= "World", c = `${a} ${b}` ) => {
+const sayHi = (a = "Hello", b = "World", c = `${a} ${b}` ) => {
   console.log(c)
 }
 

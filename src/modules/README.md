@@ -1,6 +1,6 @@
 # Modules
 
-A JavaScript module is a chunk of JS code living in its own file, containing various bindings, e.g. functions and regular variable declarations.
+A JavaScript module is a chunk of JS code living in its own `strict` file, containing various bindings, e.g. functions and regular variable declarations.
 
 **`a-module,js`**
 
@@ -15,6 +15,8 @@ const logUserHelper = () => {
 ```
 
 The code within a module is local to that module, and cannot be accessed by other modules in the application - the code within can only be accessed publicly when we export that thing from a module.
+
+_Modules allow for a cleaner, better-structured codebase._
 
 ## `export` and `import`
 
@@ -95,16 +97,9 @@ Whilst a rare occurence, it is possible to have conflicting import identifiers, 
 
 All of the above pertains to 'statically' imported module code, but modules can be imported dynamically using [dynamic imports](dynamic-module-loading).
 
-## **Benefits**
-
-- Modules allow for a cleaner, better-structured codebase.
-- Each module is automatically set to 'strict' mode.
-
 ## **Modules Background**
 
 Modular javaScript isn't anything new in JS applications, however prior to ES2015 there wasn't native support for modules; developers had to code a module pattern themselves, or use a third-party library to provide javaScript modules.
-
-### Module Pattern
 
 ### NPM
 
