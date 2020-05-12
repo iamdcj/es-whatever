@@ -31,5 +31,5 @@ Most of the features in this repository will be from the 6th Edition of the lang
 
 ##### References and Resources
 
-[ES6: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
-[ES6 For Everyone](https://es6.io/)
+- [ES6: The Complete Developer's Guide](https://www.udemy.com/javascript-es6-tutorial/)
+- [ES6 For Everyone](https://es6.io/)
