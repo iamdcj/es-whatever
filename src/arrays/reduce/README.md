@@ -5,12 +5,14 @@ The `reduce` helper method iterates over an array, running a callback function(r
 ```
 const adder = [1,2,3,4].reduce((acc, val) => {
   return acc + val;
-}, 0)
+})
 
 console.log(adder) // 10
 ```
 
-## Reducer Callback Function
+The `reduce` helper takes two arguments; a callback function and an optional initial accumulator value.
+
+## Callback Function
 The 'reducer' callback function is invoked for each iteration of the source array; this function should return a value each time it is called - the return value is 'collected' in the defined accumulator value.
 
 ### Arguments
@@ -33,6 +35,8 @@ const adder = [1,2,3,4].reduce((acc, val) => {
 // 6
 // 10
 ```
+
+
 
 ---
 
