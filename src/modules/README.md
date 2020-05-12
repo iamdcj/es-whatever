@@ -85,6 +85,12 @@ Importing a `default` export isn't achieved using the destructuring syntax, as p
 
 #### Handling identifier conflicts
 
+Whilst a rare occurence, it is possible to have conflicting import identifiers, especially when importing third-party modules into your application. If this situtation arises, there are a number of ways to get around it.
+
+##### `as` Statement
+
+##### Import Object
+
 ##### Static and Dynamic
 
 All of the above pertains to 'statically' imported module code, but modules can be imported dynamically using [dynamic imports](dynamic-module-loading).
