@@ -22,8 +22,8 @@ Most of the features in this repository will be from the 6th Edition of the lang
 - Generators
 - Async
 - Symbols
-- Optional Chaining`*`
-- Nullish Coalescing`*`
+- Optional Chaining
+- Nullish Coalescing
 
 `*` - Proposal
 
